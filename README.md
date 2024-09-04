@@ -34,42 +34,12 @@
 
 An opinionated Vite/React/TypeScript/Tailwind starter according to my preferences
 
-## Features
-
-- Based off [create vite --template react-swc-ts](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)
-  - Vite v5
-  - TypeScript v5
-  - React v18
-- Tailwind CSS
-  - [CVA](https://cva.style/docs/examples/react/tailwind-css) and [CLSX](https://www.npmjs.com/package/clsx)
-  - Darkmode via [selector strategy](https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually) with [small script](./blob/main/src/dark-mode-system-preference.js) that detects system preference
-- Prettier
-  - [@ianvs/prettier-plugin-sort-imports](https://github.com/IanVS/prettier-plugin-sort-imports) to sort imports in this order: react, built in modules, `@/`, everything else, css
-  - [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) to sort tailwind classes
-  - [prettier-plugin-classnames](https://www.npmjs.com/package/prettier-plugin-classnames) to break long tailwind strings into multi line strings
-  - [prettier-plugin-merge](https://www.npmjs.com/package/prettier-plugin-merge/v/0.5.1) to merge output of above plugins
-- Github pages deploy action
-  - Configured to use `pnpm`
-- Disable React Devtools in production with a [small script](./blob/main/src/react-devtools.js)
-- Suggested production eslint configuration applied ([see here](./blob/main/create-vite_react-swc-ts_README.md))
-- VsCode extensions
-  - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-  - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
-  - [Pretty TypeScript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)
-- VsCode workspace settings
-  - Use workspace TypeScript version
-  - Format on save/paste
-  - Tailwind CSS IntelliSense settings
-- [vite-tsconfig-paths](https://www.npmjs.com/package/vite-tsconfig-paths)
-  - so any defined paths in `tsconfig.json` are usable in vite without having to copy them to `vite.config.ts`
-  - `@/*` path configured in `tsconfig.json`
-
 ## Installation
 
 Create the project with `pnpm` and `degit`
 
 ```sh
-pnpmx degit wtoldt/vite-react-starter my-app
+pnpm exec degit wtoldt/vite-react-starter my-app
 ```
 
 > If the second argument is omitted (`my-app`), the repo will be cloned to the current directory
@@ -98,6 +68,35 @@ Serve with hot reload at `http://localhost:5173/<project-name>`
 ```sh
 pnpm run dev
 ```
+
+## Features
+
+- Based off [create vite --template react-swc-ts](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)
+  - Vite v5
+  - TypeScript v5
+  - React v18
+- Tailwind CSS
+  - [CVA](https://cva.style/docs/examples/react/tailwind-css) and [CLSX](https://www.npmjs.com/package/clsx)
+  - Darkmode via [selector strategy](https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually) with [small script](./blob/main/src/dark-mode-system-preference.js) that detects system preference
+- Prettier
+  - [@ianvs/prettier-plugin-sort-imports](https://github.com/IanVS/prettier-plugin-sort-imports) to sort imports in this order: react, built in modules, `@/`, everything else, css
+  - [prettier-plugin-tailwindcss](https://github.com/tailwindlabs/prettier-plugin-tailwindcss) to sort tailwind classes
+  - [prettier-plugin-classnames](https://www.npmjs.com/package/prettier-plugin-classnames) to break long tailwind strings into multi line strings
+  - [prettier-plugin-merge](https://www.npmjs.com/package/prettier-plugin-merge/v/0.5.1) to merge output of above plugins
+- Github pages deploy action
+  - Configured to use `pnpm`
+- Disable React Devtools in production with a [small script](./blob/main/src/react-devtools.js)
+- VsCode extensions
+  - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+  - [Pretty TypeScript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)
+- VsCode workspace settings
+  - Use workspace TypeScript version
+  - Format on save/paste
+  - Tailwind CSS IntelliSense settings
+- [vite-tsconfig-paths](https://www.npmjs.com/package/vite-tsconfig-paths)
+  - so any defined paths in `tsconfig.json` are usable in vite without having to copy them to `vite.config.ts`
+  - `@/*` path configured in `tsconfig.json` and `tsconfig.app.json`
 
 ## Extra Info
 
