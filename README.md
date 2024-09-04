@@ -39,7 +39,7 @@ An opinionated Vite/React/TypeScript/Tailwind starter according to my preference
 Create the project with `pnpm` and `degit`
 
 ```sh
-pnpm exec degit wtoldt/vite-react-starter my-app
+pnpx degit wtoldt/vite-react-starter my-app
 ```
 
 > If the second argument is omitted (`my-app`), the repo will be cloned to the current directory
